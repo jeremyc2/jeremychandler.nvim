@@ -41,20 +41,28 @@ return {
         component_separators = '',
         section_separators = { left = '', right = '' },
       },
-      sections = {
+      sections = {},
+      winbar = {
         lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
         lualine_b = { { 'filename', path = 4 } },
         lualine_c = {
           'branch',
           'diff',
         },
-        lualine_x = {},
+        lualine_x = {
+          -- A hack to hide the status line completely (otherwise it leaves a blank line behind)
+          -- This also gets overriden if we add it as a function in options.lua instead
+          function()
+            vim.opt.laststatus = 0
+            return ''
+          end,
+        },
         lualine_y = { 'filetype', 'progress' },
         lualine_z = {
           { 'location', separator = { right = '' }, left_padding = 2 },
         },
       },
-      inactive_sections = {
+      inactive_winbar = {
         lualine_a = { 'filename' },
         lualine_b = {},
         lualine_c = {},
