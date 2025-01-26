@@ -52,6 +52,8 @@ return {
       -- Telescope picker. This is really useful to discover what Telescope can
       -- do as well as how to actually do it!
 
+      local layout_actions = require 'telescope.actions.layout'
+
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
       require('telescope').setup {
@@ -60,7 +62,20 @@ return {
         --
         defaults = {
           mappings = {
-            i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+            i = {
+              ['<c-enter>'] = 'to_fuzzy_refine',
+              ['<C-p>'] = layout_actions.toggle_preview,
+              ['<C-l>'] = layout_actions.cycle_layout_next,
+            },
+            n = {
+              ['<c-enter>'] = 'to_fuzzy_refine',
+              ['<C-p>'] = layout_actions.toggle_preview,
+              ['<C-l>'] = layout_actions.cycle_layout_next,
+            },
+          },
+          layout_config = {
+            height = 0.999,
+            width = 0.999,
           },
         },
         -- pickers = {}
