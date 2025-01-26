@@ -64,7 +64,6 @@ return {
           mappings = {
             i = {
               ['<c-enter>'] = 'to_fuzzy_refine',
-              ['<C-p>'] = layout_actions.toggle_preview,
               ['<C-l>'] = layout_actions.cycle_layout_next,
             },
             n = {
