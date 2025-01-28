@@ -11,3 +11,12 @@ A starting point for Neovim that is:
 * Completely Documented
 
 **NOT** a Neovim distribution, but instead a starting point for your configuration.
+
+## Finding inspiration
+
+- https://dotfyle.com/
+- https://www.youtube.com/@typecraft_dev
+- https://www.youtube.com/@devopstoolbox
+- https://www.youtube.com/@JoshuaMorony
+- https://www.youtube.com/@teej_dv
+- https://www.youtube.com/@ElijahManor
